@@ -12,6 +12,7 @@ RUN apk add --update-cache --no-cache \
                    unzip \
                    ansible \
                    tar && \
+apk update --no-cache && \                   
 apk upgrade --no-cache && \
 rm -rf /tmp/* && \
 rm -rf /var/cache/apk/*
