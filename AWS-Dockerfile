@@ -6,8 +6,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV INITRD No
 
 RUN apt-get -y update \
-    && apt-get install -qq -y software-properties-common \
-    && apt-add-repository --yes --update ppa:ansible/ansible \
     && apt-get install -qq -y ansible python3-cryptography jq python3-boto python3-boto3 awscli \
 ## Cleanup
     && apt-get -y dist-upgrade \
